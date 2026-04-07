@@ -117,13 +117,12 @@ def t(en, ru):
 if "lang" not in st.session_state:
     st.session_state.lang = "RU"
 
-lang = st.radio(
+st.radio(
     "",
     ["EN", "RU"],
-    index=0 if st.session_state.lang == "EN" else 1,
+    key="lang",
     horizontal=True
 )
-st.session_state.lang = lang
 
 RU = st.session_state.lang == "RU"
 
